@@ -26,7 +26,7 @@ var ball = {
     },
 
     computer: function (compDefense, offense) {
-        this.compDefence = compDefense;
+        this.compDefense = compDefense;
         this.offense = offense;
     }
 
