@@ -21,7 +21,7 @@ body {
     font-weight: bold;
     padding: 0px;
     text-align: center;
-    height: 20%;
+    height: 40%;
     width: 100%;
     margin: 0px;
 }
@@ -29,17 +29,37 @@ body {
 #playertable {
     float: left;
     width: 50%;
+    text-align: center;
+}
+
+th {
     text-align: left;
 }
 
-#cell {
-    width: 25%;
-    height: 20%;
+#ttop {
+    padding: 0px;
     margin: 0px;
-    border: yellow solid;
+    border: yellow solid 1px;
+    border-bottom: none;
 }
+
+#tbot {
+    padding: 0px;
+    margin: 0px;
+    border: yellow solid 1px;
+}
+
 
 #scoreboard {
     float: right;
     width: 50%;
+    text-align: center;
+}
+
+#scorec {
+    padding: 0px;
+    margin: 0px;
+    border: yellow solid 1px;
+    width: 50%;
+    height: 100%;
 }
