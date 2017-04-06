@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+}
+
+#title {
+    color: #0479ff;
+    font-family: Times New Roman;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0px;
+    text-align: center;
+    height: 10%;
+    width: 100%;
+    margin: 0px;
+}
+
+#ps {
+    color: #0479ff;
+    font-family: Times New Roman;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0px;
+    text-align: center;
+    height: 20%;
+    width: 100%;
+    margin: 0px;
+}
+
+#playertable {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+#cell {
+    width: 25%;
+    height: 20%;
+    margin: 0px;
+    border: yellow solid;
+}
+
+#scoreboard {
+    float: right;
+    width: 50%;
+}
