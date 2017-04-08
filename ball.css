@@ -14,6 +14,7 @@ body {
     height: 10%;
     width: 100%;
     margin: 0px;
+    background-color: black;
 }
 
 #ps {
@@ -51,7 +52,12 @@ th {
     border: yellow solid 1px;
 }
 
-
+.btn-md {
+    padding: 0px;
+    margin: 0px;
+    width: 50%;
+    height: 20%;
+}
 #scoreboard {
     float: right;
     width: 50%;
