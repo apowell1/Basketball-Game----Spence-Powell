@@ -13,7 +13,6 @@ var ball = {
 
     computer: new Player(),
 
-
     storePlayerP: function(number) {
         this.player.baller = number;
         if (this.player.baller === 0) {
