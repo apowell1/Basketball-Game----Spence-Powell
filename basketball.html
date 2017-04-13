@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
 
 <head>
@@ -10,8 +12,9 @@
     <link rel="Stylesheet" href="basketball.css"> </head>
 
 <body id="body">
-    <div> <pre id="title">TITLE</pre>
-        <hr> </div>
+    <div> <pre id="title">1 on 1 Basketball by Aaron Powell and Josh Spence</pre>
+        <hr>
+        </div>
     <div id="ps">
         <div id="playertable">
             <table>
@@ -20,18 +23,18 @@
                 </tr>
                 <tr>
                     <td id="ttop"> <img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=350&h=254" height=30% width=50%>
-                        <button type="button" class="btn btn-primary btn-md" onclick="ball.storePlayerP(0)">Chris Paul</button>
+                        <button type="button" class="btn btn-primary btn-md" onclick="ball.choosePlayer('Paul')">Chris Paul</button>
                     </td>
                     <td id="ttop"> <img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png&w=350&h=254" height=30% width=50%>
-                        <button type="button" class="btn btn-primary btn-md">Stephen Curry</button>
+                        <button type="button" class="btn btn-primary btn-md" onclick="ball.choosePlayer('Curry')">Stephen Curry</button>
                     </td>
                 </tr>
                 <tr>
                     <td id="tbot"> <img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3992.png&w=350&h=254" height=30% width=50%>
-                        <button type="button" class="btn btn-primary btn-md">James Harden</button>
+                        <button type="button" class="btn btn-primary btn-md" onclick="ball.choosePlayer('Harden')">James Harden</button>
                     </td>
                     <td id="tbot"> <img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6442.png&w=350&h=254" height=30% width=50%>
-                        <button type="button" class="btn btn-primary btn-md">Kyrie Irving</button>
+                        <button type="button" class="btn btn-primary btn-md" onclick="ball.choosePlayer('Irving')">Kyrie Irving</button>
                     </td>
                 </tr>
             </table>
@@ -43,15 +46,20 @@
                     <th>Computer Score:</th>
                 </tr>
                 <tr>
-                    <td id="scorec">0</td>
-                    <td id="scorec">0</td>
+                    <td id= "p1" class="scorec">0</td>
+                    <td id= "p2" class="scorec">0</td>
                 </tr>
             </table>
         </div>
-        <br> </div>
-    <div id="gbutton"> </div>
-    <hr>
-    <div id="pconsole"></div>
+         </div>
+    <div id="gbutton">
+        <button type="button" id = "b1" class="btn btn-primary btn-md" onclick="ball.calcScore(2)">Attempt 2 Pointer</button>
+        <button type="button" id = "b2" class="btn btn-primary btn-md" onclick="ball.calcScore(3)">Attempt 3 Pointer</button>
+    </div>
+
+    <div id="pconsole">
+
+    </div>
 </body>
 
 </html>
