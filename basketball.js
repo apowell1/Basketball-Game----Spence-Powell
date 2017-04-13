@@ -8,6 +8,20 @@ var ball = {
     , 'Harden'
     , 'Irving'
     ]
+    , displayW: function (outputId) {
+        var outputText = "";
+        outputText = 'YOU WON!';
+        document.getElementById(outputId).style.color = "Green";
+        document.getElementById(outputId).style.textAlign = "Left";
+        document.getElementById(outputId).innerHTML = outputText;
+    }
+    , displayL: function (outputId) {
+        var outputText = "";
+        outputText = 'YOU LOST!';
+        document.getElementById(outputId).style.color = "Red";
+        document.getElementById(outputId).style.textAlign = "Left";
+        document.getElementById(outputId).innerHTML = outputText;
+    }
     , baller: {
         Curry: {
             threePoint: 95
@@ -67,7 +81,6 @@ var ball = {
             var fourthRand = Math.random();
             var secondThree = .5 + ((ball.secondPlayer.threePoint - ball.firstPlayer.defense) / 200);
             var compRand = Math.floor(Math.random() * 2);
-
             if (num === 2) {
                 if (firstRand < firstTwo) {
                     ball.player1Score += 2;
@@ -108,11 +121,13 @@ var ball = {
                     $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 3 point shot.' + '<hr>');
                 }
             }
-            if (ball.player1Score >= 21) {
-                alert(ball.firstPlayerName + ' won! GAME OVER.');
-            }
-            else if (ball.player2Score >= 21) {
+            if (ball.player2Score >= 21 && ball.player2Score > ball.player1Score) {
                 alert(ball.secondPlayerName + ' won! GAME OVER.');
+                ball.displayL('signal');
+            }
+            else if (ball.player1Score >= 21) {
+                alert(ball.firstPlayerName + ' won! GAME OVER.');
+                ball.displayW('signal');
             }
         }
         else {
