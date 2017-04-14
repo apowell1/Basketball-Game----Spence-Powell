@@ -70,7 +70,7 @@ var ball = {
             console.log(ball.secondPlayer);
         }
     }
-    , calcScore: function (num) {
+    , gameSCG: function (num) {
         if (ball.firstPlayer && ball.secondPlayer) {
             var firstRand = Math.random();
             var firstTwo = .5 + ((ball.firstPlayer.twoPoint - ball.secondPlayer.defense) / 200);
@@ -85,48 +85,48 @@ var ball = {
                 if (firstRand < firstTwo) {
                     ball.player1Score += 2;
                     $('#p1').text(ball.player1Score);
-                    $('#pconsole').append(ball.firstPlayerName + ' makes a 2 point shot.');
+                    $('#pconsole').append(ball.firstPlayerName + ' makes a 2 point shot. ' + ball.secondPlayerName + ' gains possession.');
                 }
                 else {
-                    $('#pconsole').append(ball.firstPlayerName + ' misses a 2 point shot.');
+                    $('#pconsole').append(ball.firstPlayerName + ' misses a 2 point shot. ' + ball.secondPlayerName + ' gets the rebound.');
                 }
             }
             if (num === 3) {
                 if (secondRand < firstThree) {
                     ball.player1Score += 3;
                     $('#p1').text(ball.player1Score);
-                    $('#pconsole').append(ball.firstPlayerName + ' makes a 3 point shot.');
+                    $('#pconsole').append(ball.firstPlayerName + ' makes a 3 point shot. ' + ball.secondPlayerName + ' gains possession.');
                 }
                 else {
-                    $('#pconsole').append(ball.firstPlayerName + ' misses a 3 point shot.');
+                    $('#pconsole').append(ball.firstPlayerName + ' misses a 3 point shot. ' + ball.secondPlayerName + ' gets the rebound.');
                 }
             }
             if (compRand == 0) {
                 if (thirdRand < secondTwo) {
                     ball.player2Score += 2;
                     $('#p2').text(ball.player2Score);
-                    $('#pconsole').append(' ' + ball.secondPlayerName + ' makes a 2 point shot.' + '<hr>');
+                    $('#pconsole').append(' ' + ball.secondPlayerName + ' makes a 2 point shot. ' + ball.firstPlayerName + ' gains possession.' + '<hr>');
                 }
                 else {
-                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 2 point shot.' + '<hr>');
+                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 2 point shot. ' + ball.firstPlayerName + ' gets the rebound.' + '<hr>');
                 }
             }
             if (compRand == 1) {
                 if (fourthRand < secondThree) {
                     ball.player2Score += 3;
                     $('#p2').text(ball.player2Score);
-                    $('#pconsole').append(' ' + ball.secondPlayerName + ' makes a 3 point shot.' + '<hr>');
+                    $('#pconsole').append(' ' + ball.secondPlayerName + ' makes a 3 point shot. ' + ball.firstPlayerName + ' gains possession.' + '<hr>');
                 }
                 else {
-                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 3 point shot.' + '<hr>');
+                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 3 point shot. ' + ball.firstPlayerName + ' gets the rebound.' + '<hr>');
                 }
             }
             if (ball.player2Score >= 21 && ball.player2Score > ball.player1Score) {
-                alert(ball.secondPlayerName + ' won! GAME OVER.');
+                alert(ball.secondPlayerName + ' wins! GAME OVER.');
                 ball.displayL('signal');
             }
             else if (ball.player1Score >= 21) {
-                alert(ball.firstPlayerName + ' won! GAME OVER.');
+                alert(ball.firstPlayerName + ' wins! GAME OVER.');
                 ball.displayW('signal');
             }
         }
