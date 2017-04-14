@@ -108,7 +108,7 @@ var ball = {
                     $('#pconsole').append(' ' + ball.secondPlayerName + ' makes a 2 point shot. ' + ball.firstPlayerName + ' gains possession.' + '<hr>');
                 }
                 else {
-                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 2 point shot. ' + ball.firstPlayerName + ' gets the rebound.' + '<hr>');
+                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 2 point shot. ' + ball.firstPlayerName + ' gets the rebound' + '<hr>');
                 }
             }
             if (compRand == 1) {
@@ -122,9 +122,11 @@ var ball = {
                 }
             }
             if (ball.player2Score >= 21 && ball.player2Score > ball.player1Score) {
+                alert('GAME OVER.');
                 ball.displayL('signal');
             }
             else if (ball.player1Score >= 21) {
+                alert('GAME OVER.');
                 ball.displayW('signal');
             }
         }
