@@ -122,11 +122,9 @@ var ball = {
                 }
             }
             if (ball.player2Score >= 21 && ball.player2Score > ball.player1Score) {
-                alert(ball.secondPlayerName + ' wins! GAME OVER.');
                 ball.displayL('signal');
             }
             else if (ball.player1Score >= 21) {
-                alert(ball.firstPlayerName + ' wins! GAME OVER.');
                 ball.displayW('signal');
             }
         }
