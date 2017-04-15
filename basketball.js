@@ -108,7 +108,7 @@ var ball = {
                     $('#pconsole').append(' ' + ball.secondPlayerName + ' makes a 2 point shot. ' + ball.firstPlayerName + ' gains possession.' + '<hr>');
                 }
                 else {
-                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 2 point shot. ' + ball.firstPlayerName + ' gets the rebound' + '<hr>');
+                    $('#pconsole').append(' ' + ball.secondPlayerName + ' misses a 2 point shot. ' + ball.firstPlayerName + ' gets the rebound.' + '<hr>');
                 }
             }
             if (compRand == 1) {
